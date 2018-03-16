@@ -36,7 +36,7 @@ plotly.offline.iplot([trace_first_three_pops])
 
 
 
-<div id="c550a57d-eabe-4ef9-af48-cd6c35319e44" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("c550a57d-eabe-4ef9-af48-cd6c35319e44", [{"x": ["Solta", "Greenville", "Buenos Aires"], "y": [1700, 84554, 13591863], "type": "bar"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="d4bbc886-7d09-4d43-9746-6290349775dd" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("d4bbc886-7d09-4d43-9746-6290349775dd", [{"x": ["Solta", "Greenville", "Buenos Aires"], "y": [1700, 84554, 13591863], "type": "bar"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 In this lesson, we will use our `for` loop to display information about our travel locations.
@@ -139,7 +139,7 @@ plotly.offline.iplot([trace_populations])
 
 
 
-<div id="55e24939-d270-4cb6-9793-5eaed843fe50" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("55e24939-d270-4cb6-9793-5eaed843fe50", [{"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [1700, 84554, 13591863, 287651, 32237, 928850, 559277, 60000, 0, 4000, 630, 2581000], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "populations"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="500723de-aa4f-4546-b3a4-c52daf34f5cc" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("500723de-aa4f-4546-b3a4-c52daf34f5cc", [{"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [1700, 84554, 13591863, 287651, 32237, 928850, 559277, 60000, 0, 4000, 630, 2581000], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "populations"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 Now we want declare a variable called `city_areas` that points to a list of all of the areas of the cities.  Let's use a `for` loop to iterate through our `cities` and have `city_areas` equal to each area of the city.  
@@ -168,16 +168,24 @@ plotly.offline.iplot([trace_populations, trace_areas])
 
 
 
-<div id="8c28228b-d9b7-4bd0-b6e2-09a0186a2190" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("8c28228b-d9b7-4bd0-b6e2-09a0186a2190", [{"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [1700, 84554, 13591863, 287651, 32237, 928850, 559277, 60000, 0, 4000, 630, 2581000], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "populations"}, {"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [59, 68, 4758, 3750, 33, 200, 491, 8300, 672, 27, 2731571, 3194], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "areas"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="f4ec0c64-af30-428c-8c93-16eeb7f2d6bb" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("f4ec0c64-af30-428c-8c93-16eeb7f2d6bb", [{"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [1700, 84554, 13591863, 287651, 32237, 928850, 559277, 60000, 0, 4000, 630, 2581000], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "populations"}, {"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [59, 68, 4758, 3750, 33, 200, 491, 8300, 672, 27, 2731571, 3194], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "areas"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
-Ok, let's just plot the trace areas separately now.
+Ok, let's just plot the middle trace areas separately now.
+
+
+```python
+middle_trace_areas = {'x': names_and_ranks[4:8], 
+                      'y': city_areas[4:8], 
+                      'type': 'bar', 
+                      'name': 'area'}
+```
 
 
 ```python
 import plotly
 plotly.offline.init_notebook_mode(connected=True)
-plotly.offline.iplot([trace_areas])
+plotly.offline.iplot([middle_trace_areas, middle_trace_populations])
 ```
 
 
@@ -185,9 +193,9 @@ plotly.offline.iplot([trace_areas])
 
 
 
-<div id="5bb2edb5-1544-4819-82af-30cabf190f0d" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("5bb2edb5-1544-4819-82af-30cabf190f0d", [{"x": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "y": [59, 68, 4758, 3750, 33, 200, 491, 8300, 672, 27, 2731571, 3194], "text": ["1. Solta", "2. Greenville", "3. Buenos Aires", "4. Los Cabos", "5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea", "9. Iguazu Falls", "10. Salina Island", "11. Toronto", "12. Pyeongchang"], "type": "bar", "name": "areas"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="0b617815-364b-4a49-b65c-8bd34e57e181" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("0b617815-364b-4a49-b65c-8bd34e57e181", [{"x": ["5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea"], "y": [33, 200, 491, 8300], "type": "bar", "name": "area"}, {"x": ["5. Walla Walla Valley", "6. Marakesh", "7. Albuquerque", "8. Archipelago Sea"], "y": [32237, 928850, 559277, 60000], "type": "bar", "name": "population"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Summary
 
-In this section we saw how we can use `for` loops to go through elements of a list and perform the same operation on each.  With using `for` loops we were able to reduce the amount of code that we wrote and write more expressive code.
+In this section we saw how we can use `for` loops to go through elements of a list and perform the same operation on each.  With using `for` loops we were able to be more expressive and reduce the amount of code we write.

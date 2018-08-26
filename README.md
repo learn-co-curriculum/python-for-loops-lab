@@ -64,18 +64,6 @@ Now, using the `cities` list, we want to create a list of the names for each cit
 
 ```python
 city_names = []
-['Buenos Aires',
- 'Toronto',
- 'Pyeongchang',
- 'Marakesh',
- 'Albuquerque',
- 'Los Cabos',
- 'Greenville',
- 'Archipelago Sea',
- 'Walla Walla Valley',
- 'Salina Island',
- 'Solta',
- 'Iguazu Falls']
 ```
 
 Your task is to assign the variable `names_and_ranks` to a list, with each element equal to the city name and it's corresponding rank.  For example, the first element would be, `"1. Buenos Aires"` and the second would be `"2. Toronto"`. Luckily for us, the list of cities that we read from our excel file is already in order my most populous to least. So, all we need to do is add numbers 1 through 12 to the beginning of each city name.
@@ -132,8 +120,16 @@ Now we want declare a variable called `city_areas` that points to a list of all 
 
 
 ```python
-city_areas = []
+city_areas = [city['Area'] for city in cities]
+city_areas
 ```
+
+
+
+
+    [4758, 2731, 3194, 200, 491, 3750, 68, 8300, 33, 27, 59, 672]
+
+
 
 
 ```python

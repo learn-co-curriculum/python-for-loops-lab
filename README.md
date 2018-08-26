@@ -1,12 +1,15 @@
 
 # Python For loops Lab
 
+## Introduction
+In this lab, we will be practicing what we know about for loops. We will use them to reduce the amount of code we write by hand to iterate through collections. We will use data from our excel file, `cities.xlsx`, that had data on different cities, their populations, and their areas. Finally, we will use this information to plot and compare each city. Let's get started!
+
 ### Learning Objectives
 
 * Understand how for loops can help us reduce repetition
-* Understand the syntax of for loops
+* Understand the syntax of for loops 
 
-### Picking up where we last left off
+## Identifying When To Use a For Loop
 
 In the last lesson, we worked with some of our travel data.  Let's retrieve a list with our travel information again from excel.  First, we read the information from excel as a list of dictionaries, with each dictionary representing a location.  And we assign this list to the variable `cities`.
 
@@ -32,7 +35,9 @@ trace_first_three_pops = {'x': x_values, 'y': y_values, 'type': 'bar'}
 plotly.offline.iplot([trace_first_three_pops])
 ```
 
-Of course, as you may have spotted, there is a good amount of repetition in displaying this data.  Just take a look at how we retrieved the data for our `x_values` and `y_values`.  
+Of course, as you may have spotted, there is a good amount of repetition in displaying this data.  Just take a look at how we retrieved the data for our `x_values` and `y_values`. And you'll notice that, unless we know the exact number of cities and populations in our excel file, this method of retrieving data might miss some data or try to access values that don't exist. 
+
+We can take a close look at this below:
 
 
 ```python
@@ -40,9 +45,11 @@ x_values = [cities[0]['City'], cities[1]['City'], cities[2]['City']]
 y_values = [cities[0]['Population'], cities[1]['Population'], cities[2]['Population']]
 ```
 
-So in this lesson, we will use our `for` loop to display information about our travel locations with less repetition.
+As we can see, if we have any more than 3 lines of data, our `x_values` and `y_values` will be incomplete, and if we had only 2 lines of data, our code would break.
 
-### Working with the For Loop
+So in this lesson, we will use our `for` loop to display information about our travel locations with less repetition and more accuracy.
+
+## Instructions
 
 Our `cities` list contains information about the top 12 cities.  For our upcoming iteration tasks, it will be useful to have a list of the numbers 0 through 11.  Use what we know about `len` and `range`to generate a list of numbers 1 through 11.  Assign this to a variable called `city_indices`.
 
@@ -52,11 +59,12 @@ city_indices = None
 city_indices # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
 
-Now we want to create labels for each of the cities. We'll provide a list of the `city_names` for you.
+Now, using the `cities` list, we want to create a list of the names for each city. Loop through each city and append it's name (`'City'`) to the `city_names` list. 
 
 
 ```python
-city_names = ['Buenos Aires',
+city_names = []
+['Buenos Aires',
  'Toronto',
  'Pyeongchang',
  'Marakesh',
@@ -70,11 +78,13 @@ city_names = ['Buenos Aires',
  'Iguazu Falls']
 ```
 
-Your task is to assign the variable `names_and_ranks` to a list, with each element equal to the city name and it's corresponding rank.  For example, the first element would be, `"1. Buenos Aires"` and the second would be `"2. Toronto"`.  Use a `for` loop and the lists `city_indices` and `city_names` to accomplish this.  We'll need to perform some nifty string interpolation to format our strings properly.  Check out [f-string interpolation](https://www.programiz.com/python-programming/string-interpolation#f) to see how we can pass values into a string.  Remember that list indices start at zero, but we want our `names_and_ranks` list to start at one!
+Your task is to assign the variable `names_and_ranks` to a list, with each element equal to the city name and it's corresponding rank.  For example, the first element would be, `"1. Buenos Aires"` and the second would be `"2. Toronto"`. Luckily for us, the list of cities that we read from our excel file is already in order my most populous to least. So, all we need to do is add numbers 1 through 12 to the beginning of each city name.
+
+Use a `for` loop and the lists `city_indices` and `city_names` to accomplish this.  We'll need to perform some nifty string interpolation to format our strings properly.  Check out [f-string interpolation](https://www.programiz.com/python-programming/string-interpolation#f) to see how we can pass values into a string.  Remember that list indices start at zero, but we want our `names_and_ranks` list to start at one!
 
 
 ```python
-names_and_ranks = []
+names_and_ranks = [] 
 # write a for loop that adds the properly formatted string to the names_and_ranks list
 ```
 
@@ -85,11 +95,12 @@ names_and_ranks[1] # '2. Toronto'
 names_and_ranks[-1] # '12. Iguazu Falls'
 ```
 
-Ok, now let's create a new variable called `city_populations`.  Use a `for` loop to iterate through `cities` and have `city_populations` equal to each of the populations.
+Ok, now use another for loop to iterate through our list of `cities` and create a new list called `city_populations` that had the population for each city (`Population`).
 
 
 ```python
 city_populations = []
+# use a for loop to iterate through the list of cities with their corresponding population
 ```
 
 
@@ -103,10 +114,10 @@ Great! Now we can begin to plot this data.  First, let's create a trace of our p
 
 
 ```python
-trace_populations = {'x': names_and_ranks,
-                     'y': city_populations,
-                     'text': names_and_ranks,
-                     'type': 'bar',
+trace_populations = {'x': names_and_ranks, 
+                     'y': city_populations, 
+                     'text': names_and_ranks, 
+                     'type': 'bar', 
                      'name': 'populations'}
 ```
 

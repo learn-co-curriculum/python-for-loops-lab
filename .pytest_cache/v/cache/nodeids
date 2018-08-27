@@ -1,0 +1,8 @@
+[
+  "test/test_index.py::test_cities_list",
+  "test/test_index.py::test_city_indices",
+  "test/test_index.py::test_city_names",
+  "test/test_index.py::test_names_ranks",
+  "test/test_index.py::test_city_populations",
+  "test/test_index.py::test_city_areas"
+]

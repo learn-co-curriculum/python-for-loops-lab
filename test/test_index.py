@@ -1,5 +1,5 @@
 import pytest
-from ipynb.fs.full.index import cities,
+from ipynb.fs.full.index import cities, city_indices, city_names, names_and_ranks, city_populations, city_areas
 
 def test_cities_list():
     assert type(cities) == type([])
@@ -15,9 +15,9 @@ def test_city_names():
     assert city_names == ['Buenos Aires', 'Toronto', 'Pyeongchang', 'Marakesh', 'Albuquerque', 'Los Cabos', 'Greenville', 'Archipelago Sea', 'Walla Walla Valley', 'Salina Island', 'Solta', 'Iguazu Falls']
 
 def test_names_ranks():
-    assert type(city_names) == type([])
-    assert len(city_names) == 12
-    assert city_names == ['1. Buenos Aires', '2. Toronto', '3. Pyeongchang', '4. Marakesh', '5. Albuquerque', '6. Los Cabos', '7. Greenville', '8. Archipelago Sea', '9. Walla Walla Valley', '10. Salina Island', '11. Solta', '12. Iguazu Falls']
+    assert type(names_and_ranks) == type([])
+    assert len(names_and_ranks) == 12
+    assert names_and_ranks == ['1. Buenos Aires', '2. Toronto', '3. Pyeongchang', '4. Marakesh', '5. Albuquerque', '6. Los Cabos', '7. Greenville', '8. Archipelago Sea', '9. Walla Walla Valley', '10. Salina Island', '11. Solta', '12. Iguazu Falls']
 
 def test_city_populations():
     assert type(city_populations) == type([])

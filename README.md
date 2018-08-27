@@ -55,16 +55,42 @@ Our `cities` list contains information about the top 12 cities.  For our upcomin
 
 
 ```python
-city_indices = None
+city_indices = list(range(0,12))
 city_indices # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
+
+
+
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+
 
 Now, using the `cities` list, we want to create a list of the names for each city. Loop through each city and append it's name (`'City'`) to the `city_names` list. 
 
 
 ```python
-city_names = []
+city_names = [city['City'] for city in cities]
+city_names
 ```
+
+
+
+
+    ['Buenos Aires',
+     'Toronto',
+     'Pyeongchang',
+     'Marakesh',
+     'Albuquerque',
+     'Los Cabos',
+     'Greenville',
+     'Archipelago Sea',
+     'Walla Walla Valley',
+     'Salina Island',
+     'Solta',
+     'Iguazu Falls']
+
+
 
 Your task is to assign the variable `names_and_ranks` to a list, with each element equal to the city name and it's corresponding rank.  For example, the first element would be, `"1. Buenos Aires"` and the second would be `"2. Toronto"`. Luckily for us, the list of cities that we read from our excel file is already in order my most populous to least. So, all we need to do is add numbers 1 through 12 to the beginning of each city name.
 
@@ -72,9 +98,30 @@ Use a `for` loop and the lists `city_indices` and `city_names` to accomplish thi
 
 
 ```python
-names_and_ranks = [] 
+names_and_ranks = []
+for i in city_indices:
+    names_and_ranks.append(f"{i+1}. {city_names[i]}")
+names_and_ranks
 # write a for loop that adds the properly formatted string to the names_and_ranks list
 ```
+
+
+
+
+    ['1. Buenos Aires',
+     '2. Toronto',
+     '3. Pyeongchang',
+     '4. Marakesh',
+     '5. Albuquerque',
+     '6. Los Cabos',
+     '7. Greenville',
+     '8. Archipelago Sea',
+     '9. Walla Walla Valley',
+     '10. Salina Island',
+     '11. Solta',
+     '12. Iguazu Falls']
+
+
 
 
 ```python
@@ -88,8 +135,29 @@ Ok, now use another for loop to iterate through our list of `cities` and create 
 
 ```python
 city_populations = []
+for city in cities:
+    city_populations.append(city['Population'])
+city_populations 
 # use a for loop to iterate through the list of cities with their corresponding population
 ```
+
+
+
+
+    [2891000,
+     2800000,
+     2581000,
+     928850,
+     559277,
+     287651,
+     84554,
+     60000,
+     32237,
+     4000,
+     1700,
+     0]
+
+
 
 
 ```python
@@ -106,7 +174,7 @@ trace_populations = {'x': names_and_ranks,
                      'y': city_populations, 
                      'text': names_and_ranks, 
                      'type': 'bar', 
-                     'name': 'populations'}
+                     'name': 'Population'}
 ```
 
 
@@ -115,6 +183,14 @@ import plotly
 plotly.offline.init_notebook_mode(connected=True)
 plotly.offline.iplot([trace_populations])
 ```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
+
+
+<div id="f7a9e980-18ee-4926-bef8-e8c90368dd28" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("f7a9e980-18ee-4926-bef8-e8c90368dd28", [{"x": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "y": [2891000, 2800000, 2581000, 928850, 559277, 287651, 84554, 60000, 32237, 4000, 1700, 0], "text": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "type": "bar", "name": "Population"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+
 
 Now we want declare a variable called `city_areas` that points to a list of all of the areas of the cities.  Let's use a `for` loop to iterate through our `cities` and have `city_areas` equal to each area of the city.  
 
@@ -133,7 +209,24 @@ city_areas
 
 
 ```python
-trace_areas = {'x': names_and_ranks, 'y': city_areas, 'text': names_and_ranks, 'type': 'bar', 'name': 'areas'}
+trace_areas = {'x': names_and_ranks, 'y': city_areas, 'text': names_and_ranks, 'type': 'bar', 'name': 'Area'}
+```
+
+Since there is such a disparity between the size of numbers that represent the population compared to the size of the numbers that represent the areas for each city, below, we are going to represent the population numbers in hundreds. That is, we will take each population and divide it by 100 (i.e. 5,000,000/100 = 500,000.00) This is purely for the purposes of seeing our numbers plotted. 
+
+No need to worry about the code below, just run the following cells to see our bar graph and keep in mind that the populations all have two more zeros to their real number.
+
+
+```python
+altered_populations = []
+for population in city_populations:
+    altered_populations.append(population/100)
+
+trace_populations = {'x': names_and_ranks, 
+                     'y': altered_populations, 
+                     'text': names_and_ranks, 
+                     'type': 'bar', 
+                     'name': 'Population'}
 ```
 
 
@@ -142,6 +235,14 @@ import plotly
 plotly.offline.init_notebook_mode(connected=True)
 plotly.offline.iplot([trace_populations, trace_areas])
 ```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
+
+
+<div id="334c0901-c5f7-42eb-9ebe-3e578963e488" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("334c0901-c5f7-42eb-9ebe-3e578963e488", [{"x": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "y": [28910.0, 28000.0, 25810.0, 9288.5, 5592.77, 2876.51, 845.54, 600.0, 322.37, 40.0, 17.0, 0.0], "text": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "type": "bar", "name": "Population"}, {"x": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "y": [4758, 2731, 3194, 200, 491, 3750, 68, 8300, 33, 27, 59, 672], "text": ["1. Buenos Aires", "2. Toronto", "3. Pyeongchang", "4. Marakesh", "5. Albuquerque", "6. Los Cabos", "7. Greenville", "8. Archipelago Sea", "9. Walla Walla Valley", "10. Salina Island", "11. Solta", "12. Iguazu Falls"], "type": "bar", "name": "Area"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+
 
 ### Summary
 

@@ -4,7 +4,7 @@
 ### Learning Objectives
 
 * Understand how for loops can help us reduce repetition
-* Understand the syntax of for loops
+* Understand the syntax of for loops 
 
 ### Picking up where we last left off
 
@@ -44,7 +44,7 @@ So in this lesson, we will use our `for` loop to display information about our t
 
 ### Working with the For Loop
 
-Our `cities` list contains information about the top 12 cities.  For our upcoming iteration tasks, it will be useful to have a list of the numbers 0 through 11.  Use what we know about `len` and `range`to generate a list of numbers 1 through 11.  Assign this to a variable called `city_indices`.
+Our `cities` list contains information about the top 12 cities.  For our upcoming iteration tasks, it will be useful to have a list of the numbers 0 through 11.  Use what we know about `len` and `range`to generate a list of numbers 0 through 11.  Assign this to a variable called `city_indices`.
 
 
 ```python
@@ -52,7 +52,7 @@ city_indices = None
 city_indices # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
 
-Now we want to create labels for each of the cities. We'll provide a list of the `city_names` for you.
+Now we want to create labels for each of the cities. We'll provide a list of the `city_names` for you. 
 
 
 ```python
@@ -74,7 +74,7 @@ Your task is to assign the variable `names_and_ranks` to a list, with each eleme
 
 
 ```python
-names_and_ranks = []
+names_and_ranks = [] 
 # write a for loop that adds the properly formatted string to the names_and_ranks list
 ```
 
@@ -103,10 +103,10 @@ Great! Now we can begin to plot this data.  First, let's create a trace of our p
 
 
 ```python
-trace_populations = {'x': names_and_ranks,
-                     'y': city_populations,
-                     'text': names_and_ranks,
-                     'type': 'bar',
+trace_populations = {'x': names_and_ranks, 
+                     'y': city_populations, 
+                     'text': names_and_ranks, 
+                     'type': 'bar', 
                      'name': 'populations'}
 ```
 

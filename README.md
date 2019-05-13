@@ -3,8 +3,9 @@
 
 ### Learning Objectives
 
-* Understand how for loops can help us reduce repetition
+* Understand how for loops can help reduce repetition
 * Understand the syntax of for loops 
+
 
 ### Picking up where we last left off
 

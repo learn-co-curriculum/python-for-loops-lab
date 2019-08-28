@@ -44,7 +44,7 @@ So in this lesson, we will use our `for` loop to display information about our t
 
 ### Working with the For Loop
 
-Our `cities` list contains information about the top 12 cities.  For our upcoming iteration tasks, it will be useful to have a list of the numbers 0 through 11.  Use what we know about `len` and `range`to generate a list of numbers 0 through 11.  Assign this to a variable called `city_indices`.
+Our `cities` list contains information about the top 12 cities by population.  For our upcoming iteration tasks, it will be useful to have a list of the numbers 0 through 11.  Use what we know about `len` and `range`to generate a list of numbers 0 through 11.  Assign this to a variable called `city_indices`.
 
 
 ```python
@@ -58,12 +58,12 @@ Now we want to create labels for each of the cities. We'll provide a list of the
 ```python
 city_names = ['Buenos Aires',
  'Toronto',
- 'Pyeongchang',
  'Marakesh',
  'Albuquerque',
  'Los Cabos',
  'Greenville',
  'Archipelago Sea',
+ 'Pyeongchang',
  'Walla Walla Valley',
  'Salina Island',
  'Solta',
@@ -94,8 +94,8 @@ city_populations = []
 
 
 ```python
-city_populations[0] # 2891000
-city_populations[1] # 2800000
+city_populations[0] # 2891
+city_populations[1] # 2732
 city_populations[-1] # 0
 ```
 
